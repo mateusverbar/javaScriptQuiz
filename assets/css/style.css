@@ -1,0 +1,37 @@
+/*:root {
+    --primary: #44e9ff;
+    --secondary: #497980;
+    --tertiary: rgb(192, 246, 253);
+    --grey: #333;
+    font-size: 62.5%;
+  }*/ /* If we want to have color variables later on */
+
+.answer-choice {
+    color:white;
+    background-color:rgb(48, 25, 150);
+    border-radius:5px;
+    border:none;
+    padding: 5px 10px 5px 10px;
+    margin: 4px;
+    display:inline-block;
+    width:100%;
+    text-align:left;
+}
+
+.answer-choice:hover {
+    background-color:plum;
+  }
+
+.question-container{
+    list-style-type:none;
+    margin: 0;
+    padding: 0px 0px 10px 0px;
+    display:inline-block;
+}
+
+/* ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0px 0px 10px 0px;
+} */
+
