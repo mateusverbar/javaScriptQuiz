@@ -52,7 +52,7 @@ var i = 0;
         quizQuestion.className = "live-quiz";
         quizQuestionContainer = document.createElement("ul");
         quizQuestionContainer.className = "question-container";
-        debugger;
+        
         quizQuestion.innerHTML = "<h1>" + questions[i].question + "</h1>";
         quizQuestionContainer.innerHTML = "<li><button class='answer-choice' type='button' id='inc1'>1. " + questions[i].answerOne + "</button></li><li><button class='answer-choice' type='button' id='inc2'>2. " + questions[i].answerTwo + "</button></li><li><button class='answer-choice' type='button' id='cor'>3. " + questions[i].answerThree + "</button></li><li><button class='answer-choice' type='button' id='inc3'>4. " + questions[i].answerFour + "</button></li>";
         
