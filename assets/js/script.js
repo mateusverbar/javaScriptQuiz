@@ -15,7 +15,7 @@ var questions = [{
 {
     question: "What has three feet but can't walk or something?",
     answerOne: "Some dumb riddle.",
-    answerTwo: "Please let me die.",
+    answerTwo: "To get to the other side.",
     answerThree: "The sphynx or something?",
     answerFour: "Blorps."
 }];
