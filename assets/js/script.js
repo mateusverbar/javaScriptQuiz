@@ -1,3 +1,5 @@
+var questionIdCounter = 0;
+
 var mainEl = document.querySelector("#main");
 var startPage = document.createElement("section");
 startPage.className = "start-page";
@@ -16,15 +18,30 @@ var loadStartPage = function() {
 }
 
 var startQuiz = function() {
-var elmnt = document.createElement("section");
-elmnt.innerHTML = "<h1>It worked!</h1>";
-elmnt.setAttribute("id","testing");
+var quizQuestion = document.createElement("section");
+quizQuestion.className = "live-quiz";
+quizQuestionContainer = document.createElement("ul");
+quizQuestionContainer.className = "question-container";
+quizQuestionContainer.innerHTML = "<li><button class='answer-choice' type='button'>1. " + questions[0].answerOne + "</button></li><li><button class='answer-choice' type='button'>2. " + questions[0].answerTwo + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[0].answerThree + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[0].answerFour + "</button></li>";
 
-mainEl = document.querySelector("#main");
+quizQuestion.innerHTML = "<h1>" + questions[0].question + "</h1>";
+quizQuestion.appendChild(quizQuestionContainer);
+
+//mainEl = document.querySelector("#main");
 //mainEl.removeChild(startPage);
 //mainEl.appendChild(elmnt);
-mainEl.replaceChild(elmnt,startPage);
+mainEl.replaceChild(quizQuestion,startPage);
 }
+
+var questions = [{
+    question: "How much script can javaScript script if javaScript could script script?",
+    answerOne: "So much Script!",
+    answerTwo: "Not so much Script...",
+    answerThree: "Too much javaScript",
+    answerFour: "Script for days"
+}];
+
+console.log(questions[0].question);
 
 document.addEventListener("load",loadStartPage());
 
