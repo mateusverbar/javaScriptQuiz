@@ -1,4 +1,4 @@
-var questionIdCounter = 0;
+//var questionIdCounter = 0;
 
 var mainEl = document.querySelector("#main");
 var startPage = document.createElement("section");
@@ -22,15 +22,21 @@ var quizQuestion = document.createElement("section");
 quizQuestion.className = "live-quiz";
 quizQuestionContainer = document.createElement("ul");
 quizQuestionContainer.className = "question-container";
-quizQuestionContainer.innerHTML = "<li><button class='answer-choice' type='button'>1. " + questions[0].answerOne + "</button></li><li><button class='answer-choice' type='button'>2. " + questions[0].answerTwo + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[0].answerThree + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[0].answerFour + "</button></li>";
 
-quizQuestion.innerHTML = "<h1>" + questions[0].question + "</h1>";
+for (let i = 0; i < questions.length; i++) {
+quizQuestionContainer.innerHTML = "<li><button class='answer-choice' type='button'>1. " + questions[i].answerOne + "</button></li><li><button class='answer-choice' type='button'>2. " + questions[i].answerTwo + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[i].answerThree + "</button></li><li><button class='answer-choice' type='button'>3. " + questions[i].answerFour + "</button></li>";
+
+quizQuestion.innerHTML = "<h1>" + questions[i].question + "</h1>";
+
 quizQuestion.appendChild(quizQuestionContainer);
+mainEl.replaceChild(quizQuestion,startPage);
+}
 
 //mainEl = document.querySelector("#main");
 //mainEl.removeChild(startPage);
 //mainEl.appendChild(elmnt);
-mainEl.replaceChild(quizQuestion,startPage);
+//quizQuestion.appendChild(quizQuestionContainer);
+//mainEl.replaceChild(quizQuestion,startPage);
 }
 
 var questions = [{
@@ -39,9 +45,14 @@ var questions = [{
     answerTwo: "Not so much Script...",
     answerThree: "Too much javaScript",
     answerFour: "Script for days"
+},
+{
+    question: "There is an online course. One enters it blind and comes out coding in javaScript. What is it?",
+    answerOne: "This bootcamp.",
+    answerTwo: "Some other bootcamp.",
+    answerThree: "Fun.",
+    answerFour: "Snorms."
 }];
-
-console.log(questions[0].question);
 
 document.addEventListener("load",loadStartPage());
 
