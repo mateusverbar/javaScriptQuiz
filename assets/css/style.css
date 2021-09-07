@@ -45,6 +45,21 @@
     width: 95%;
   }
 
+  .start-page {
+      text-align:center;
+  }
+
+  .start-btn {
+    color:white;
+    background-color:rgb(48, 25, 150);
+    border-radius:5px;
+    border:none;
+    padding: 5px 10px 5px 10px;
+    margin: 4px;
+    display:inline-block;
+    width:auto;
+  }
+
 /* ul {
     list-style-type:none;
     margin: 0;
