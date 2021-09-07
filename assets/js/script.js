@@ -21,8 +21,9 @@ elmnt.innerHTML = "<h1>It worked!</h1>";
 elmnt.setAttribute("id","testing");
 
 mainEl = document.querySelector("#main");
-mainEl.removeChild(startPage);
-mainEl.appendChild(elmnt);
+//mainEl.removeChild(startPage);
+//mainEl.appendChild(elmnt);
+mainEl.replaceChild(elmnt,startPage);
 }
 
 document.addEventListener("load",loadStartPage());
